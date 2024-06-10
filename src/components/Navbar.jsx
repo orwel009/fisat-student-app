@@ -4,28 +4,28 @@ import { Link } from 'react-router-dom'
 const Navbar = () => {
     return (
         <div>
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                <div class="container-fluid">
-                    <Link class="navbar-brand" to="#">FisatStudentApp</Link>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+            <nav className="navbar navbar-expand-lg bg-body-tertiary">
+                <div className="container-fluid">
+                    <Link className="navbar-brand" to="#">FisatStudentApp</Link>
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <Link class="nav-link active" aria-current="page" to="/">AddStudent</Link>
+                    <div className="collapse navbar-collapse" id="navbarNav">
+                        <ul className="navbar-nav">
+                            <li className="nav-item">
+                                <Link className="nav-link active" aria-current="page" to="/">AddStudent</Link>
                             </li>
-                            <li class="nav-item">
-                                <Link class="nav-link" to="/search">Search</Link>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/search">Search</Link>
                             </li>
-                            <li class="nav-item">
-                                <Link class="nav-link" to="/delete">Delete</Link>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/delete">Delete</Link>
                             </li>
-                            <li class="nav-item">
-                                <Link class="nav-link" to="/viewstudent">ViewStudent</Link>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/viewstudent">ViewStudent</Link>
                             </li>
-                            <li class="nav-item">
-                                <Link class="nav-link disabled" aria-disabled="true">EditStudent</Link>
+                            <li className="nav-item">
+                                <Link className="nav-link disabled" aria-disabled="true">EditStudent</Link>
                             </li>
                         </ul>
                     </div>

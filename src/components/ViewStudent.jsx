@@ -6,11 +6,16 @@ const ViewStudent = () => {
     const [stud,changeStud] = useState([])
 
     const fetchData = ()=>{
-        axios.get("https://anishpdm.github.io/dummy-api-new/student.json").then(
+        axios.get("https://courseapplogix.onrender.com/getdata").then(
             (response)=>{
                 changeStud(response.data)
             }
-        ).catch().finally()
+        ).catch(
+            (error)=>{
+                console.log(error.message)
+                alert(error.message)
+            }
+        ).finally()
     }
     useEffect(()=>{fetchData()},[])
     return (
@@ -19,14 +24,18 @@ const ViewStudent = () => {
             <div className="container">
                 <div className="row">
                     <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                        <table class="table">
+                        <table className="table">
                             <thead>
                                 <tr>
                                     <th scope="col">Id</th>
                                     <th scope="col">FirstName</th>
                                     <th scope="col">LastName</th>
-                                    <th scope="col">DOB</th>
+                                    <th scope="col">College</th>
                                     <th scope="col">Course</th>
+                                    <th scope="col">DOB</th>
+                                    <th scope="col">Mobile</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Address</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -34,11 +43,15 @@ const ViewStudent = () => {
                                     stud.map(
                                      (value,index)=>{
                                         return <tr>
-                                        <th scope="row">{value._id}</th>
+                                        <th scope="row">{index}</th>
                                         <td>{value.firstname}</td>
                                         <td>{value.lastname}</td>
-                                        <td>{value.dob}</td>
+                                        <td>{value.college}</td>
                                         <td>{value.course}</td>
+                                        <td>{value.dob}</td>
+                                        <td>{value.mobile}</td>
+                                        <td>{value.email}</td>
+                                        <td>{value.address}</td>
                                     </tr>
                                      }   
                                     )
